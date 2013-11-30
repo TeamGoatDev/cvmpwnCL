@@ -20,6 +20,14 @@ Il prendra alors chaque mot de passe l'un apres l'autre et tentera de se connect
 Finalement, chaque fois qu'une connexion ne retourne pas d'erreurs, il stockera la paire dans le fichier de résultat. Si le paramètre "r" n'est pas rempli, le fichier par défaut se nomme "workin_login.txt"
 
 
+##########	Mass Downloader ############
+
+MassDownload est un script post-exploitation. Il "craft" et exécute des commandes wget récursives pour télécharger la totalité des dossiers possédés par les utilisateurs pwnés précédemment. Il faut bien-sûr avoir wget installé sur sa machine.
+
+Utilisation:
+$python MassDownload.py
+
+
 
 ##########################
 #                        #
