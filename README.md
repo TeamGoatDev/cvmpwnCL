@@ -2,9 +2,8 @@
 
 "CVM Pwner for command line" (cvmpwnerCL.py) est un brute-forcer visant le serveur ftp du Cégep du Vieux Montréal. Il s'agît d'une adaptation moins messy et utilisant seulement la command line interface de l'ancienne version qui utilisait PyQt. Cette version est plus portable car elle ne nécessite aucune librairie externe (pis en plus t'as l'air fucking 1337 quand tu écris dans le terminal)
 
-===========
-Utilisation
-===========
+
+### Utilisation
 `$python cvmpwnerCL.py (-y <year> (-r <results>)) (-l)`
 
 `-y` 	Le paramètre `-y` permet de choisir l'année que l'application va utiliser
@@ -23,19 +22,16 @@ Il prendra alors chaque mot de passe l'un apres l'autre et tentera de se connect
 
 Finalement, chaque fois qu'une connexion ne retourne pas d'erreurs, il stockera la paire dans le fichier de résultat. Si le paramètre `-r` n'est pas rempli, le fichier par défaut se nomme **workin_login.txt**
 
-===============
-Mass Downloader
-===============
+## Mass Downloader
 
 MassDownload est un script post-exploitation. Il "craft" et exécute des commandes wget récursives pour télécharger la totalité des dossiers possédés par les utilisateurs pwnés précédemment. Il faut bien-sûr avoir wget installé sur sa machine.
 
-Utilisation:
+#### Utilisation:
+
 `$python MassDownload.py`
 
 
-================
-Legal Disclaimer
-================
+## Legal Disclaimer
 
 Bien sûr, tout ceci est une satire et le code, une oeuvre théorique visant à montrer la faiblesse de la politique de création de mots de passe, ne dois pas être utilisé sans la permission d'un technicien de l'établissement.
 
