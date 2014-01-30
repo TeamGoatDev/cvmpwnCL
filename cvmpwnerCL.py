@@ -8,6 +8,7 @@ import socket
 import os
 import time
 import optparse
+import re
 
 def main():
     parser = optparse.OptionParser("usage: ./cvmpwnerCL.py "+\
@@ -174,28 +175,40 @@ def list_pass(year,pass_list):
 
 
 def list_users(user_input,user_list):
+	print "[+] Updating user list"
 	f = open(user_input,"r")
+	if not f:
+		print "[-] Cant open dictionary file"
+		return 0
 	dlist = f.read()
 	f.close()
 	
 	size = len(dlist)
-	
+
 	f = open(user_list,"w")
+
+	if not f:
+		"[-] Cant open user file"
 	
 	i = 39
 	j = 46
 	k = 0
 	
 	ulist = ""
+	p = re.compile("[0-9]{7}")
+
 	
 	while j < size:
-		if dlist[i:j] != 'ajusted':
+		print dlist[i:j]
+		#if dlist[i:j] != '20':
+		if p.match(dlist[i:j]):
 			ulist += "\n"
 			ulist += dlist[i:j]
 			i = i+47
 			j = j+47
 			k = k+1
 		else:
+			print "[+] Writing to file"
 			f.write(ulist)
 			print "[+] Done! You have "+str(k)+" users listed.\n"
 			print "[!] Remember the data is from the CVM_dir.txt file."
