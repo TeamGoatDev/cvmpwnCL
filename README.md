@@ -12,11 +12,11 @@
 `-r` 	Le paramètre `-r` est le chemin vers le fichier de résultats où sera
 	stocké les paires username/password découverts
 
--l 	"l" utilise le dictionnaire de noms d'utilisateurs **lists/CVM_dir.txt** pour
+`-l` 	Le paramètre `l` utilise le dictionnaire de noms d'utilisateurs **lists/CVM_dir.txt** pour
 	restaurer la liste de cibles **users.txt**
 
 
-Lors du lancement, l'application génèrera toutes les dates de naisance possibles de l'année contenue dans le paramètre "y" pour les stocker dans la liste de mots de passes possibles (lists/pass.txt).
+Lors du lancement, l'application génèrera toutes les dates de naisance possibles de l'année contenue dans le paramètre `-y` pour les stocker dans la liste de mots de passes possibles (lists/pass.txt).
 
 Il prendra alors chaque mot de passe l'un apres l'autre et tentera de se connecter avec les noms d'utilisateurs fournis (c'est à dire ceux du fichier "lists/users.txt". Utilisez d'abord `-l` pour remplir le fichier avec tous les utillisateurs connus et retirez manuellement ceux qui ne vous intéresse pas).
 
