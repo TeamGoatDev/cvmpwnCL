@@ -13,7 +13,7 @@ import re
 def main():
     parser = optparse.OptionParser("usage: ./cvmpwnerCL.py "+\
                                    "(-y <year> (-r <results>)) (-l)")
-    parser.add_option('-y',dest='year', type='string', help="The year you want to raid")
+    parser.add_option('-y',dest='year', type='string', help="The birth year you want to raid")
     parser.add_option('-r',dest='results', type='string', help="The file where to write results")
     parser.add_option('-l', action="store_true", dest='list', help="Adds every known users (CVM_dir.txt) to the list of users to test (users.txt)")
     (options, args) = parser.parse_args()
