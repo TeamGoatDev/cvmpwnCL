@@ -17,7 +17,7 @@ Par defaut, le mot de passe d'un compte FTP étudiant au CVM est la date de nais
 `-l` 	Le paramètre `-l` utilise le dictionnaire de noms d'utilisateurs **Ressources/lists/CVM_dir.txt** pour
 	restaurer la liste de cibles **users.txt**
 
-`-h`    Le paramètre `h` fait apparaitre l'aide
+`-h`    Le paramètre `-h` fait apparaitre l'aide
 
 
 Lors du lancement, l'application génèrera toutes les dates de naisance possibles de l'année contenue dans le paramètre `-y` pour les stocker dans la liste de mots de passes possibles (lists/pass.txt).
