@@ -2,6 +2,8 @@
 
 "CVM Pwner for command line" (cvmpwnerCL.py) est un brute-forcer visant le serveur ftp du Cégep du Vieux Montréal. Il s'agît d'une adaptation moins messy et utilisant seulement la command line interface de l'ancienne version qui utilisait PyQt. Cette version est plus portable car elle ne nécessite aucune librairie externe (pis en plus t'as l'air fucking 1337 quand tu écris dans le terminal)
 
+### Fonctionnement
+Par defaut, le mot de passe d'un compte FTP étudiant au CVM est la date de naissance de l'étudiant en question sous le format AAMMJJ. Ce mot de passe est rarement changé. Comme il est possible d'obtenir la liste des comptes (disponible dans ce repo), nous pouvons itérer les dates de naissances d'une année afin de brute-forcer notre entrée. Le serveur bloque une connexion lorsqu'il détecte trop de mauvaises tentatives en peu de temps pour un même compte. Pour palier à ce problème, nous n'essayons pas tous les mots de passes pour un utilisateur, mais plutôt tous les utilisateurs pour un mot de passe, la boucle étant assez longue pour que le serveur ait remis son compteur de tentatives a 0 lorsque nous réessayerons cet utilisateur.
 
 ### Utilisation
 `$python cvmpwnerCL.py (-y <year> (-r <results>)) (-l) (-h)`
