@@ -4,7 +4,7 @@
 
 
 ### Utilisation
-`$python cvmpwnerCL.py (-y <year> (-r <results>)) (-l)`
+`$python cvmpwnerCL.py (-y <year> (-r <results>)) (-l) (-h)`
 
 `-y` 	Le paramètre `-y` permet de choisir l'année que l'application va utiliser
 	comme référence, sachant que le mot de passe est constitué d'une date.
@@ -12,8 +12,10 @@
 `-r` 	Le paramètre `-r` est le chemin vers le fichier de résultats où sera
 	stocké les paires username/password découverts
 
-`-l` 	Le paramètre `l` utilise le dictionnaire de noms d'utilisateurs **lists/CVM_dir.txt** pour
+`-l` 	Le paramètre `-l` utilise le dictionnaire de noms d'utilisateurs **Ressources/lists/CVM_dir.txt** pour
 	restaurer la liste de cibles **users.txt**
+
+`-h`    Le paramètre `h` fait apparaitre l'aide
 
 
 Lors du lancement, l'application génèrera toutes les dates de naisance possibles de l'année contenue dans le paramètre `-y` pour les stocker dans la liste de mots de passes possibles (lists/pass.txt).
