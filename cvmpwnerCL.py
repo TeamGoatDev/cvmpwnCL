@@ -46,6 +46,10 @@ def main():
 
 def pwn_that(server,user_list, pass_list,results):
 
+	if not os.path.isfile(results):
+		f = open(results,"w")
+		f.close()
+
 	socket.setdefaulttimeout(2)
         ans = "unknown"
         try:
@@ -113,7 +117,8 @@ def pwn_that(server,user_list, pass_list,results):
 				g = f.read()
 				f.close()
 				
-				g = g+usernames[j]+":"+passwords[i]+"\n"
+				#g = g+usernames[j]+":"+passwords[i]+"\n"
+				g = g+usernames[j][:len(usernames[j])-1]+":"+passwords[i][:len(passwords[i])-1]
 				
 				f = open(results,"w")
 				f.write(g)
@@ -122,7 +127,9 @@ def pwn_that(server,user_list, pass_list,results):
 				ftp.quit()
 				success += 1
 				j += 1
-				
+			except KeyboardInterrupt:
+				print "\n[!] End of operation."
+				return 0
 			except:
 				j += 1
 				pass
