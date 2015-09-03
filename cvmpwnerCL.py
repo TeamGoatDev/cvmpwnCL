@@ -118,7 +118,7 @@ def pwn_that(server,user_list, pass_list,results):
 				f.close()
 				
 				#g = g+usernames[j]+":"+passwords[i]+"\n"
-				g = g+usernames[j][:len(usernames[j])-1]+":"+passwords[i][:len(passwords[i])-1]
+				g = g+usernames[j][:len(usernames[j])-1]+":"+passwords[i]
 				
 				f = open(results,"w")
 				f.write(g)
