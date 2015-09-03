@@ -22,7 +22,7 @@ Par defaut, le mot de passe d'un compte FTP étudiant au CVM est la date de nais
 
 Lors du lancement, l'application génèrera toutes les dates de naisance possibles de l'année contenue dans le paramètre `-y` pour les stocker dans la liste de mots de passes possibles (lists/pass.txt).
 
-Il prendra alors chaque mot de passe l'un apres l'autre et tentera de se connecter avec les noms d'utilisateurs fournis (c'est à dire ceux du fichier "lists/users.txt". Utilisez d'abord `-l` pour remplir le fichier avec tous les utillisateurs connus et retirez manuellement ceux qui ne vous intéresse pas).
+Il prendra alors chaque mot de passe l'un apres l'autre et tentera de se connecter avec les noms d'utilisateurs fournis (c'est à dire ceux du fichier "lists/users.txt". Utilisez d'abord `-l` pour remplir le fichier users.txt avec tous les utillisateurs connus du dictionnaire CVM_dir.txt et retirez manuellement ceux qui ne vous intéresse pas. Vous pouvez ainsi garder le dictionnaire intact pour le futur).
 
 Finalement, chaque fois qu'une connexion ne retourne pas d'erreurs, il stockera la paire dans le fichier de résultat. Si le paramètre `-r` n'est pas rempli, le fichier par défaut se nomme **workin_login.txt**
 
